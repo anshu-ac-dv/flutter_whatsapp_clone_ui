@@ -48,18 +48,18 @@ class _MyHomePageState extends State<MyHomePage> {
         body: TabBarView(
           children: [
             Center(child: Text('Camera')),
-            ListView.builder(
-              itemCount: 20,
-              itemBuilder: (context, index) {
-                return ListTile(
-                  leading: CircleAvatar(
-                    backgroundColor: Colors.teal,
-                    child: Text('Anshu'),
-                  ),
-                  title: Text('Chat'),
-                  subtitle: Text('Last message from Chat'),
-                );
-              },
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.builder(
+                itemCount: 20,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: CircleAvatar(child: Icon(Icons.person)),
+                    title: Text('Chat'),
+                    subtitle: Text('Last message from Chat'),
+                  );
+                },
+              ),
             ),
             Center(child: Text('Status')),
             Center(child: Text('Calls')),
