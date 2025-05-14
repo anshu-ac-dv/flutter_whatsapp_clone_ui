@@ -51,18 +51,45 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListView.builder(
-                itemCount: 20,
+                itemCount: 100,
                 itemBuilder: (context, index) {
                   return ListTile(
                     leading: CircleAvatar(child: Icon(Icons.person)),
                     title: Text('Chat'),
                     subtitle: Text('Last message from Chat'),
+                    trailing: Text('6:30 AM'),
                   );
                 },
               ),
             ),
-            Center(child: Text('Status')),
-            Center(child: Text('Calls')),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.builder(
+                itemCount: 100,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: CircleAvatar(child: Icon(Icons.person)),
+                    title: Text('Chat'),
+                    subtitle: Text('Last message from Chat'),
+                    trailing: Text('6:30 AM'),
+                  );
+                },
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.builder(
+                itemCount: 100,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    leading: CircleAvatar(child: Icon(Icons.person_2)),
+                    title: Text('Calls'),
+                    subtitle: Text('You Missed Call'),
+                    trailing: Icon(Icons.phone),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
